@@ -50,7 +50,7 @@ export function SiteNavbar({ homeHref = "/", items }: SiteNavbarProps) {
         </a>
 
         {/* Desktop links */}
-        <div className="hidden items-center gap-7 md:flex">
+        <div className="hidden items-center gap-7 lg:flex">
           {items.map((item) => (
             <a key={item.href} href={item.href} className={desktopLink}>
               {item.label}
@@ -64,7 +64,7 @@ export function SiteNavbar({ homeHref = "/", items }: SiteNavbarProps) {
           onClick={() => setOpen(true)}
           aria-label="Open menu"
           aria-expanded={open}
-          className="flex h-10 w-10 shrink-0 items-center justify-center text-ink md:hidden"
+          className="flex h-10 w-10 shrink-0 items-center justify-center text-ink lg:hidden"
         >
           <Menu className="h-7 w-7" />
         </button>
@@ -75,7 +75,7 @@ export function SiteNavbar({ homeHref = "/", items }: SiteNavbarProps) {
           would otherwise become the containing block for this fixed element and
           confine it to the header strip. Mounted only while open. */}
       {open && (
-        <div className="fixed inset-0 z-50 flex flex-col bg-paper px-4 py-4 md:hidden">
+        <div className="fixed inset-0 z-50 flex flex-col overflow-y-auto bg-paper px-4 py-4 lg:hidden">
           <div className="flex items-center justify-between border-b border-ink pb-4">
             <Logo variant="lockup" size={34} />
             <button

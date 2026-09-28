@@ -5,6 +5,7 @@ import { Button } from "@/components/ui/button"
 import { Card, CardContent } from "@/components/ui/card"
 import { Logo } from "@/components/ui/logo"
 import { SiteNavbar } from "@/components/ui/site-navbar"
+import { PoaPilot } from "@/components/poa-pilot"
 import Image from "next/image"
 
 export default function Component() {
@@ -21,6 +22,7 @@ export default function Component() {
           { href: "#partners", label: "Partners" },
           { href: "#about", label: "About" },
           { href: "#meetings", label: "Meetings" },
+          { href: "#poa-pilot", label: "Pilot" },
           { href: "/past-meetups", label: "Past Meetups" },
           { href: "#contact", label: "Contact" },
         ]}
@@ -80,9 +82,9 @@ export default function Component() {
       </section>
 
       {/* Partners Section */}
-      <section id="partners" className="bg-paper-0 border-y border-ink py-14">
+      <section id="partners" className="scroll-mt-20 bg-paper-0 border-y border-ink py-14">
         <div className="container mx-auto px-4">
-          <div className="max-w-2xl mx-auto text-center">
+          <div className="max-w-4xl mx-auto text-center">
             <h2 className="font-display font-bold uppercase tracking-tight text-3xl text-ink mb-10">Partners</h2>
             <div className="flex flex-wrap items-center justify-center gap-8">
               <a
@@ -153,6 +155,25 @@ export default function Component() {
                   Bread Cooperative
                 </span>
               </a>
+              <a
+                href="https://poa.box/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="group flex flex-col items-center"
+              >
+                <div className="w-20 h-20 flex items-center justify-center bg-paper border border-ink shadow-hard-sm p-3 transition-transform group-hover:-translate-x-0.5 group-hover:-translate-y-0.5">
+                  <img
+                    src="/poa-logo.png"
+                    alt=""
+                    width={1007}
+                    height={756}
+                    className="w-full h-full object-contain"
+                  />
+                </div>
+                <span className="mt-3 font-body text-sm text-grey-2 font-medium group-hover:text-ink">
+                  Poa
+                </span>
+              </a>
             </div>
           </div>
         </div>
@@ -207,6 +228,30 @@ export default function Component() {
         </div>
       </section>
 
+      {/* Meetings Section */}
+      <section id="meetings" className="bg-paper py-20">
+        <div className="container mx-auto px-4">
+          <div className="max-w-4xl mx-auto text-center">
+            <h2 className="font-display font-bold uppercase tracking-tight text-4xl md:text-5xl text-ink mb-8">Regular Gatherings</h2>
+            <p className="font-body text-lg text-grey-2 mb-10 max-w-2xl mx-auto">
+              Check out our calendar for upcoming events, workshops, and community calls.
+            </p>
+            <div className="w-full max-w-3xl mx-auto">
+              <iframe
+                src="https://lu.ma/embed/calendar/cal-LTmdzQUVscVHodG/events"
+                title="Decentral Park events calendar"
+                className="w-full h-[600px] border border-ink shadow-hard bg-paper-0"
+                allowFullScreen={true}
+                aria-hidden="false"
+                tabIndex={0}
+              />
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <PoaPilot />
+
       {/* Park Activities Section */}
       <section className="bg-paper-1 border-y border-ink py-20">
         <div className="container mx-auto px-4">
@@ -238,27 +283,6 @@ export default function Component() {
               conversations to simple moments of joy, we're creating space for all the ways we can build a better world
               together.
             </p>
-          </div>
-        </div>
-      </section>
-
-      {/* Meetings Section */}
-      <section id="meetings" className="bg-paper py-20">
-        <div className="container mx-auto px-4">
-          <div className="max-w-4xl mx-auto text-center">
-            <h2 className="font-display font-bold uppercase tracking-tight text-4xl md:text-5xl text-ink mb-8">Regular Gatherings</h2>
-            <p className="font-body text-lg text-grey-2 mb-10 max-w-2xl mx-auto">
-              Check out our calendar for upcoming events, workshops, and community calls.
-            </p>
-            <div className="w-full max-w-3xl mx-auto">
-              <iframe
-                src="https://lu.ma/embed/calendar/cal-LTmdzQUVscVHodG/events"
-                className="w-full h-[600px] border border-ink shadow-hard bg-paper-0"
-                allowFullScreen={true}
-                aria-hidden="false"
-                tabIndex={0}
-              />
-            </div>
           </div>
         </div>
       </section>

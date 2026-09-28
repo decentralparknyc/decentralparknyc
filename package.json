@@ -6,6 +6,7 @@
     "build": "next build",
     "dev": "next dev",
     "lint": "eslint .",
+    "test:export": "node --test tests/static-export.test.mjs",
     "start": "next start"
   },
   "dependencies": {
